@@ -7,6 +7,25 @@
 <meta name="description" content="Ebook Rota do Sabor - Edição Cookies: 56 receitas testadas, do clássico ao gourmet, com passo a passo claro. Pagamento único.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1535506070825151');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1535506070825151&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
   :root{
     --bg:#fdfaf5;
@@ -105,6 +124,14 @@
   }
   .cover-art svg{ display:block; width:100%; height:100%; }
 
+  /* video block */
+  .video-section{ padding:8px 0 48px; }
+  .video-slot{
+    max-width:640px; margin:0 auto; aspect-ratio:16/9; border-radius:8px;
+    position:relative; cursor:pointer;
+  }
+  .video-caption{ text-align:center; color:var(--ink-dim); font-size:13px; margin-top:10px; }
+
   /* preview / advertisement block */
   .preview-wrap{ max-width:520px; margin:0 auto; padding:0 24px 48px; }
   .preview-frame{
@@ -119,22 +146,6 @@
   .preview-caption{ padding:14px 18px; font-size:13px; color:var(--ink-dim); text-align:center; }
   .preview-cta-wrap{ text-align:center; margin-top:18px; }
   .preview-cta-wrap .small-note{ font-size:12px; color:var(--ink-dim); margin-top:8px; }
-
-  /* video block */
-  .video-section{ padding:8px 0 48px; }
-  .video-slot{
-    max-width:640px; margin:0 auto; aspect-ratio:16/9; border-radius:8px;
-    position:relative; cursor:pointer;
-  }
-  .video-slot .play{
-    width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.92);
-    display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.25);
-  }
-  .video-slot .play::after{
-    content:""; width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent;
-    border-left:20px solid var(--orange); margin-left:5px;
-  }
-  .video-caption{ text-align:center; color:var(--ink-dim); font-size:13px; margin-top:10px; }
 
   /* includes section */
   .includes{ background:var(--bg-alt); padding:56px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -218,36 +229,38 @@
         <div class="row save"><span>Você economiza</span><span>73%</span></div>
       </div>
 
-      <a href="#comprar" class="btn-cta">Garantir Acesso Imediato — R$ 17,90</a>
+      <a href="https://pay.kiwify.com.br/b3Ejixb" class="btn-cta">Garantir Acesso Imediato — R$ 17,90</a>
       <div class="trust-line">Acesso digital imediato · Checkout seguro · Garantia de 7 dias</div>
     </div>
 
     <div class="cover-art">
-      <img class="ph" src="assets/capa-ebook.png" alt="Capa do ebook Rota do Sabor — 56 Receitas">
+      <img class="ph" src="capa-ebook.png" alt="Capa do ebook Rota do Sabor — 56 Receitas">
     </div>
   </div>
 </section>
 
-<div class="preview-wrap">
-  <div class="preview-frame">
-    <div class="preview-photo">
-      <span class="adv-tag">Prévia</span>
-      <img class="ph" src="assets/foto-produto.png" alt="Foto de um doce recém-saído do forno">
-    </div>
-    <div class="preview-caption">Assim é a apresentação de cada receita no ebook — foto, tempo de preparo e modo de fazer passo a passo.</div>
-  </div>
-  <div class="preview-cta-wrap">
-    <a href="#comprar" class="btn-cta">Baixar Agora — R$ 17,90</a>
-    <div class="small-note">Garantia de 7 dias — devolução total se não gostar</div>
-  </div>
-</div>
-
+<!-- Bloco do Vídeo (Agora acima da Prévia) -->
 <div class="video-section">
   <div class="wrap">
     <div class="video-slot">
       <iframe src="https://player.vimeo.com/video/1218180182" style="position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:8px;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Vídeo de apresentação — Rota do Sabor"></iframe>
     </div>
     <p class="video-caption">🎥 Assista ao vídeo e veja como é fácil preparar cada receita.</p>
+  </div>
+</div>
+
+<!-- Bloco da Prévia da Imagem (Agora abaixo do Vídeo) -->
+<div class="preview-wrap">
+  <div class="preview-frame">
+    <div class="preview-photo">
+      <span class="adv-tag">Prévia</span>
+      <img class="ph" src="foto-produto.png" alt="Foto de um doce recém-saído do forno">
+    </div>
+    <div class="preview-caption">Assim é a apresentação de cada receita no ebook — foto, tempo de preparo e modo de fazer passo a passo.</div>
+  </div>
+  <div class="preview-cta-wrap">
+    <a href="https://pay.kiwify.com.br/b3Ejixb" class="btn-cta">Baixar Agora — R$ 17,90</a>
+    <div class="small-note">Garantia de 7 dias — devolução total se não gostar</div>
   </div>
 </div>
 
@@ -272,13 +285,13 @@
         </ul>
       </div>
       <div class="includes-photo-slot" style="border-radius:10px; overflow:hidden; box-shadow:0 12px 30px rgba(43,38,32,0.14);">
-        <img class="ph" src="assets/foto-produto.png" alt="Doces prontos, recém-saídos do forno">
+        <img class="ph" src="foto-produto.png" alt="Doces prontos, recém-saídos do forno">
       </div>
     </div>
 
     <div class="cta-bar" id="comprar">
       <p>Baixe agora e faça seu primeiro cookie hoje à noite.</p>
-      <a href="https://pay.kiwify.com.br/SEU-LINK-AQUI" class="btn-white">Garantir Acesso — R$ 17,90</a>
+      <a href="https://pay.kiwify.com.br/b3Ejixb" class="btn-white">Garantir Acesso — R$ 17,90</a>
     </div>
     <div class="cta-bar-note">Acesso digital imediato · Checkout seguro · Garantia de 7 dias</div>
   </div>
